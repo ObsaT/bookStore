@@ -10,9 +10,8 @@ export async function getBooks() {
     return data;
 }
 export async function getBook(booId: number): Promise<BookModel> {
-    const book = (await getBooks());
     const url = `https://frontassignment.hyperhire.in/?page=1`;
     const res = await axios.get<responseModel>(url);
     const data = res.data;
-    return book.data[0]
+    return data.data[0]
 }

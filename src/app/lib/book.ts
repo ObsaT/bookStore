@@ -9,7 +9,7 @@ export async function getBooks() {
     const data = res.data;
     return data;
 }
-export async function getBook(booId: number): Promise<BookModel> {
+export async function getBook(bookId: number){
     const book = (await getBooks());
     return book.data[0]
 }

@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: white;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.svg {
+  mask-type: alpha
+}
+
+.header-txt {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+}
+
+.card {
+  width: 187px;
+}
+
+.card-img {
+  background-color: #EDEEF3
+}
+
+.kr {
+  font-family: Noto Sans CJK KR;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: -0.01em;
+}
+
+.pr-txt {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  color: red;
+}
+
+.bk-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+.detail-wrapper {
+  width: 375px;
+  top: 48px;
+}
+
+.img {
+  background-color: #EDEEF3;
+  height: 450px;
+}
+
+.desc {
+  font-size: 12px;
+}
+
+.detail-p {
+  font-size: 12px;
+}
+
+.footer {
+  color: #AFB9CA;
+  background-color: white;
+}
+
+.detail-container {
+  width: 375px;
+   top: 48px;
+}
+.img-container{
+height: 450px;
+background-color: #EDEEF3;
+}

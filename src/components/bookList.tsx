@@ -4,6 +4,7 @@ import Book from '@/components/book'
 import { bookListSelector } from "@/app/state/selector/bookSelector";
 import { userState } from "@/app/state/atoms/bookState";
 import Image from "next/image";
+import Link from 'next/link'
 import { useRecoilValue } from 'recoil';
 const BookList = () => {
   const books = useRecoilValue(bookListSelector);
@@ -29,9 +30,11 @@ const BookList = () => {
         </div>
         <div className='flex items-center justify-center'>
           <div className="grid md:grid-cols-3 grid-cols-2 gap-2 w-full justify-center  items-center">
-            {data.map((dt, index) => {
+            {data.map((book, index) => {
               return (<div key={index}>
-                <Book {...dt} />
+                 <Link href= {`/${book.price}`} >
+                   <Book {...book} />
+                </Link>
               </div>
               )
             })}

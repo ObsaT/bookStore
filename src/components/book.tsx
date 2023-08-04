@@ -2,9 +2,8 @@ import '@/styles/globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import BookModel from '@/models/bookModel'
-const Book = (data: BookModel, id: number) => {
+const Book = (data: BookModel) => {
     return (
-        <Link href="/This is book">
         <div className='card bg-red-200  flex flex-col border-1  justify-center items-center'>
             <div className='card-img flex justify-center items-center'>
               <Image src={data.coverImage} alt='book' width={187} height={180}   />
@@ -21,7 +20,6 @@ const Book = (data: BookModel, id: number) => {
                 </div>
             </div>
         </div>
-        </Link>
     )
 }
 export default Book

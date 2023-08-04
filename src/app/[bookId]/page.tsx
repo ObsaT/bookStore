@@ -2,7 +2,6 @@ import BookModel from "@/models/bookModel";
 import { getBook, getBooks } from "../lib/book";
 import responseModel from "@/models/responseModel";
 import BookDetail from "@/components/bookDetail";
-import { useRouter } from "next/router";
 
 type Params = {
   params: {
@@ -27,4 +26,10 @@ const  page  = async ({params: {bookId}}: Params )  => {
   )
 }
 export default page;
- 
+export async function generateStaticParams() {
+  const bookData: Promise<responseModel> = getBooks();
+  const book =  (await bookData);
+  return book.data.map((book) => {
+    {bookId: book.title}
+  });
+}

@@ -11,7 +11,7 @@ const BookList = () => {
   const { data } = books;
   const router = useRouter()
   const refresh = () => {
-    router.push('/')
+    router.replace('/');
   };
   return (
     <>
